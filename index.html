@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- font-awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <!-- owl carousel -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+        integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+        integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.green.min.css"
+        integrity="sha512-C8Movfk6DU/H5PzarG0+Dv9MA9IZzvmQpO/3cIlGIflmtY3vIud07myMu4M/NTPJl8jmZtt/4mC9bAioMZBBdA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Clion</title>
+</head>
+
+<body>
+    <section class="hero_section p-2 relative w-full bg-cover bg-center">
+        <div class="container xl:max-w-6xl lg:max-w-5xl md:max-w-4xl sm:max-w-3xl mx-auto">
+            <header class="px-0 sm:px-3 md:px-0 flex pt-3  ps-2 md:ps-0 mb-8 items-center">
+                <img src="./assets/images/logo/logo.png" alt="">
+            </header>
+            <div
+                class="px-0 sm:px-3 md:px-0 relative pt-3 mb-20 flex flex-col lg:flex-row justify-center lg:justify-between items-center ">
+                <div
+                    class="animate__animated animate__fadeInLeft text-center max-w-[700px] flex flex-col font-titillium-web lg:items-start items-center w-full text-center lg:text-left lg:w-3/6 space-y-6 text-white">
+                    <p class="text-[15px] sm:text-[18px] uppercase font-open-sans tracking-[2px]">We Craft Stuffs</p>
+                    <h2 class="text-3xl sm:text-5xl font-[100] !leading-tight">We Do <span
+                            class="font-bold">Professional
+                            Things</span> to Grow Your
+                        Business</h2>
+                    <p class="opacity-65 font-open-sans text-[15px] sm:text-[20px] font-[400]">We care to deliver and
+                        craft adaptive
+                        services and solutions to our customers to achieve and satisfy their needs. We always take
+                        attention to every details within work.</p>
+                    <div class="flex flex-col sm:flex-row items-center mt-10">
+                        <button
+                            class="text-white font-semibold text-[18px] sm:text-[24px] bg-primary hover:bg-transparent hover:border-2 hover:border-primary border-2 border-transparent p-2 px-6 rounded-full focus:outline-none transition-colors">Let's
+                            Start</button>
+                        <a href="/" class="sm:ml-5 text-sm text-center sm:text-start opacity-65 mt-3 sm:mt-0 sm:w-40">We
+                            Hope to Listen From You Soon</a>
+                    </div>
+                </div>
+                <div class="mt-10 lg:mt-0 animate__animated wow animate__fadeInRight banner_form bg-white p-8 rounded-lg">
+                    <form id="hero_form">
+                        <h5 class="font-titillium-web">Transfer amount</h5>
+                        <div class="form_field border-gray-200 border rounded-md mt-2 w-full p-3 flex items-center justify-between">
+                            <div class="select_box">
+                                <div id="fromCurrencySelected" class="select_currency_from flex items-center">
+                                    <img src="https://uat-content.mtfxgroup.com/uploads/gb_6f7be5bb59.svg"
+                                        class="w-8 mr-1" alt=""> GBP
+                                </div>
+                            </div>
+                            <input type="text" name="required_amount" id="required_amount" class="editable_text"
+                                value="10000">
+                        </div>
+
+                        <div class="exchange_rates p-3 my-4">
+                            <div class="flex items-center mb-3 justify-between">
+                                <!-- Replaced 'd-flex align-items-center mb-3 justify-content-between' -->
+                                <span class="disabled_text font-open-sans font-semibold">Exchange rate</span>
+                                <span class="disabled_text font-open-sans font-semibold">1.2474 / 0.8016</span>
+                            </div>
+                            <div class="flex items-center mb-3 justify-between">
+                                <!-- Replaced 'd-flex align-items-center mb-3 justify-content-between' -->
+                                <span class="text-primary text-md font-semibold">Exchange rate</span>
+                                <span class="text-primary text-md font-semibold">1.2474 / 0.8016</span>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <!-- Replaced 'd-flex align-items-center mb-0 justify-content-between' -->
+                                <span class="disabled_text font-open-sans font-semibold">Enjoy extra saving on your first FX
+                                    transfer</span>
+                            </div>
+                        </div>
+
+                        <div class="exchange_rates p-3 my-4">
+                            <div class="flex items-center mb-3 justify-between">
+                                <!-- Replaced 'd-flex align-items-center mb-3 justify-content-between' -->
+                                <span class="disabled_text font-open-sans font-semibold">MTFX fee*</span>
+                                <span class="disabled_text font-open-sans font-semibold">+ £0 GBP</span>
+                            </div>
+                            <div class="flex items-center mb-3 justify-between">
+                                <!-- Replaced 'd-flex align-items-center mb-3 justify-content-between' -->
+                                <span class="text-primary text-md font-semibold">Total amount you pay</span>
+                                <span class="text-primary text-md font-semibold">£10,000GBP</span>
+                            </div>
+                        </div>
+
+                        <h5 class="font-titillium-web">Recipient Gets</h5>
+                        <div class="form_field border border-gray-200 rounded-md mt-2 p-3 flex items-center justify-between">
+                            <div class="select_box">
+                                <div id="toCurrencySelected" class="select_currency_to flex items-center">
+                                    <img src="https://uat-content.mtfxgroup.com/uploads/us_fe22e367c0.svg"
+                                        class="w-8 mr-1" alt=""> USD
+                                </div>
+                            </div>
+                            <input type="number" name="estimate_amount" id="estimate_amount" class="editable_text"
+                                value="10000">
+                        </div>
+                        <p class="mx-auto text-center mt-3 mb-1 text-gray-700">Already an MTFX client? <span
+                                class="text-primary">Login</span></p>
+                        <div class="flex justify-center">
+                            <button class="bg-primary p-3 text-white hover:bg-transparent hover:text-primary hover:border-2 font-open-sans border-2 border-primary font-bold rounded-full px-10 mt-3">Sign Up</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="container mx-auto px-4">
+        <h3
+            class="wow animate__animated animate__fadeInUp text-center pt-16 pb-6 mx-auto text-[#222]  max-w-[650px] text-[16px] sm:text-[22px] md:text-[30px] font-[200] mb-10 font-titillium-web">
+            We Always Take Attention to
+            Every Details
+            Within Work
+            We Care to Deliver and Craft <em class="font-[500]"> Adaptive Services</em> and Solutions to
+            Our Customers to Achieve and <em class="font-[500]">Satisfy Their Needs.</em>
+        </h3>
+        <hr class="opacity-10">
+    </section>
+    <section class="container py-16 mx-auto">
+        <div class="flex flex-wrap justify-center">
+            <div data-wow-delay="0.3s"
+                class="w-full md:w-1/2 lg:w-1/4 hover:-translate-y-1 px-3 transition-translate duration-100 wow animate__animated animate__fadeInUp text-center max-w-[400px] card py-5">
+                <div
+                    class="hover:scale-[1.14] transition-scale duration-200 flex items-center justify-center rounded-full h-16 w-16 mx-auto text-white mb-3 bg-primary">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M14.857 17.082a23.848 23.848 0 0 0 5.454-1.31A8.967 8.967 0 0 1 18 9.75V9A6 6 0 0 0 6 9v.75a8.967 8.967 0 0 1-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 0 1-5.714 0m5.714 0a3 3 0 1 1-5.714 0" />
+                    </svg>
+                </div>
+                <h4 class="text-[21.6px] text-[#222] mb-2 font-titillium-web font-semibold">Technological Innovation
+                </h4>
+                <p class="font-open-sans opacity-65">Praesent dapibus, tortor neque egestas auguae, eu vulputate magna
+                    eu erat. </p>
+            </div>
+            <div data-wow-delay="0.5s"
+                class="w-full md:w-1/2 lg:w-1/4 hover:-translate-y-1 px-3 transition-translate duration-100 wow animate__animated animate__fadeInUp text-center max-w-[400px] card py-5">
+                <div
+                    class="hover:scale-[1.14] transition-scale duration-200 flex items-center justify-center rounded-full h-16 w-16 mx-auto text-white mb-3 bg-primary">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M12 18v-5.25m0 0a6.01 6.01 0 0 0 1.5-.189m-1.5.189a6.01 6.01 0 0 1-1.5-.189m3.75 7.478a12.06 12.06 0 0 1-4.5 0m3.75 2.383a14.406 14.406 0 0 1-3 0M14.25 18v-.192c0-.983.658-1.823 1.508-2.316a7.5 7.5 0 1 0-7.517 0c.85.493 1.509 1.333 1.509 2.316V18" />
+                    </svg>
+                </div>
+                <h4 class="text-[21.6px] text-[#222] mb-2 font-titillium-web font-semibold">Creativity Designs</h4>
+                <p class="font-open-sans opacity-65">Praesent dapibus, tortor neque egestas auguae, eu vulputate magna
+                    eu erat. </p>
+            </div>
+            <div data-wow-delay="0.7s"
+                class="w-full md:w-1/2 lg:w-1/4 hover:-translate-y-1 px-3 transition-translate duration-100 wow animate__animated animate__fadeInUp text-center max-w-[400px] card py-5">
+                <div
+                    class="hover:scale-[1.14] transition-scale duration-200 flex items-center justify-center rounded-full h-16 w-16 mx-auto text-white mb-3 bg-primary">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 0 1 .865-.501 48.172 48.172 0 0 0 3.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0 0 12 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018Z" />
+                    </svg>
+                </div>
+                <h4 class="text-[21.6px] text-[#222] mb-2 font-titillium-web font-semibold">Custom Support</h4>
+                <p class="font-open-sans opacity-65">Praesent dapibus, tortor neque egestas auguae, eu vulputate magna
+                    eu erat. </p>
+            </div>
+            <div data-wow-delay="0.9s"
+                class="w-full md:w-1/2 lg:w-1/4 hover:-translate-y-1 px-3 transition-translate duration-100 wow animate__animated animate__fadeInUp text-center max-w-[400px] card py-5">
+                <div
+                    class="hover:scale-[1.14] transition-scale duration-200 flex items-center justify-center rounded-full h-16 w-16 mx-auto text-white mb-3 bg-primary">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25M9 16.5v.75m3-3v3M15 12v5.25m-4.5-15H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9Z" />
+                    </svg>
+                </div>
+                <h4 class="text-[21.6px] text-[#222] mb-2 font-titillium-web font-semibold">Project Management</h4>
+                <p class="font-open-sans opacity-65">Praesent dapibus, tortor neque egestas auguae, eu vulputate magna
+                    eu erat. </p>
+            </div>
+        </div>
+    </section>
+    <section class="bg-gray-100 py-16">
+        <div class="container xl:max-w-6xl lg:max-w-5xl md:max-w-4xl sm:max-w-3xl mx-auto mx-auto px-4">
+            <div class="flex flex-nowrap flex-col lg:flex-row ">
+                <div data-wow-delay="0.5s"
+                    class="w-full wow animate__animated animate__fadeInUp lg:w-1/2 pe-0 lg:pe-10">
+                    <h3 class=" text-[#222] font-titillium-web  max-w-[858px] text-[26px] sm:text-[36px] font-[100]">
+                        Learn How to
+                        <span class="font-[600]">Grow Your Audience</span>
+                        and Build an Online Business
+                    </h3>
+                    <p class="text-sm mt-3 font-open-sans mx-auto">This should be used to tell a story and let your
+                        users know a
+                        little more about your product or service. How can you benefit them?</p>
+                    <div class="space-y-6">
+                        <div class="flex flex-col sm:flex-row mt-10">
+                            <div class="flex justify-between items-start">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="size-14 h-10 mr-2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+                                </svg>
+                                <div>
+                                    <h4 class="text-xl font-bold mb-2 font-titillium-web">Ultimate Tools</h4>
+                                    <p class="font-open-sans">Praesent dapibus, neque id cursus faucibus, tortor neque
+                                        egestas augue.</p>
+                                </div>
+                            </div>
+                            <div class="flex mt-4 sm:mt-0">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="size-14 h-10 mr-2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+                                </svg>
+                                <div>
+                                    <h4 class="text-xl font-bold mb-2 font-titillium-web">Best Analytics</h4>
+                                    <p class="font-open-sans">Praesent dapibus, neque id cursus faucibus, tortor neque
+                                        egestas augue.</p>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="flex flex-col sm:flex-row mt-10">
+                            <div class="flex justify-between">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="size-14 h-10 mr-2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+                                </svg>
+                                <div>
+                                    <h4 class="text-xl font-bold mb-2 font-titillium-web">SEO &amp; Analytics</h4>
+                                    <p class="font-open-sans">Praesent dapibus, neque id cursus faucibus, tortor neque
+                                        egestas augue.</p>
+                                </div>
+                            </div>
+                            <div class="flex mt-4 sm:mt-0">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="size-14 h-10 mr-2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+                                </svg>
+                                <div>
+                                    <h4 class="text-xl font-bold mb-2 font-titillium-web">Creative Solutions</h4>
+                                    <p class="font-open-sans">Praesent dapibus, neque id cursus faucibus, tortor neque
+                                        egestas augue.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-10">
+                        <button
+                            class="text-white font-[500] bg-primary border-0 py-[0.9rem] px-[2.5rem] rounded-full focus:outline-none hover:bg-transparent border-2 hover:border-primary hover:text-primary">Get
+                            Quote</button>
+                    </div>
+                </div>
+                <div data-wow-delay="0.8s"
+                    class="mt-6 lg:mt-0 w-full wow animate__animated animate__fadeInRight lg:w-1/2 video-preview">
+                    <a class="img-bg lightbox-iframe" href="https://vimeo.com/45830194">
+                        <div class="bg-element" style="background-image: url(&quot;./assets/images/img-1.jpg&quot;);">
+                        </div>
+                        <div class="overlay-colored color-bg-dark opacity-50"></div>
+                    </a>
+                    <a class="btn-video lightbox-iframe" href="https://vimeo.com/45830194">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="size-10">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.347a1.125 1.125 0 0 1 0 1.972l-11.54 6.347a1.125 1.125 0 0 1-1.667-.986V5.653Z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="relative flex items-center bg-cover py-16 bg-center"
+        style="background: linear-gradient(rgb(34, 34, 34, 0.85) , rgb(34, 34, 34,0.85)) , url('./assets/images/sction-2.jpg');">
+        <div class="flex items-start flex-row justify-center flex-wrap w-full">
+            <div data-wow-delay="0.3s"
+                class="wow animate__animated animate__fadeInUp w-full md:w-1/2 lg:w-1/4 text-center max-w-[400px] text-white p-5">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="size-14 text-primary mx-auto text-5xl mb-2">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M14.857 17.082a23.848 23.848 0 0 0 5.454-1.31A8.967 8.967 0 0 1 18 9.75V9A6 6 0 0 0 6 9v.75a8.967 8.967 0 0 1-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 0 1-5.714 0m5.714 0a3 3 0 1 1-5.714 0" />
+                </svg>
+                <h4 class="font-titillium-web text-[48px] font-bold mb-2">1465</h4>
+                <p class="opacity-65 font-open-sans">Projects Completed</p>
+            </div>
+            <div data-wow-delay="0.6s"
+                class="wow animate__animated animate__fadeInUp w-full md:w-1/2 lg:w-1/4 text-center max-w-[400px] text-white p-5">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="size-14 text-primary mx-auto text-5xl mb-2">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M18 18.72a9.094 9.094 0 0 0 3.741-.479 3 3 0 0 0-4.682-2.72m.94 3.198.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0 1 12 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 0 1 6 18.719m12 0a5.971 5.971 0 0 0-.941-3.197m0 0A5.995 5.995 0 0 0 12 12.75a5.995 5.995 0 0 0-5.058 2.772m0 0a3 3 0 0 0-4.681 2.72 8.986 8.986 0 0 0 3.74.477m.94-3.197a5.971 5.971 0 0 0-.94 3.197M15 6.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm6 3a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Zm-13.5 0a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Z" />
+                </svg>
+
+
+                <h4 class="font-titillium-web text-[48px] font-bold mb-2">290</h4>
+                <p class="opacity-65 font-open-sans">Happy Clients</p>
+            </div>
+            <div data-wow-delay="0.9s"
+                class="wow animate__animated animate__fadeInUp w-full md:w-1/2 lg:w-1/4 text-center max-w-[400px] text-white p-5">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="size-14 text-primary mx-auto text-5xl mb-2">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M16.5 6v.75m0 3v.75m0 3v.75m0 3V18m-9-5.25h5.25M7.5 15h3M3.375 5.25c-.621 0-1.125.504-1.125 1.125v3.026a2.999 2.999 0 0 1 0 5.198v3.026c0 .621.504 1.125 1.125 1.125h17.25c.621 0 1.125-.504 1.125-1.125v-3.026a2.999 2.999 0 0 1 0-5.198V6.375c0-.621-.504-1.125-1.125-1.125H3.375Z" />
+                </svg>
+
+                <h4 class="font-titillium-web text-[48px] font-bold mb-2">1532</h4>
+                <p class="opacity-65 font-open-sans">Close Tickets</p>
+            </div>
+            <div data-wow-delay="1.2s"
+                class="wow animate__animated animate__fadeInUp w-full md:w-1/2 lg:w-1/4 text-center max-w-[400px] text-white p-5">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="size-14 text-primary mx-auto text-5xl mb-2">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                </svg>
+                <h4 class="font-titillium-web text-[48px] font-bold mb-2">27980</h4>
+                <p class="opacity-65 font-open-sans">Working Hours</p>
+            </div>
+        </div>
+
+    </section>
+    <section class="container mx-auto px-4 py-20">
+        <div class="text-center flex justify-center flex-col items-center mb-20">
+            <h3 class="text-center max-w-[690px] text-[#222]  text-[22px] md:text-[36px] font-[300] mb-10">Get Your
+                Best
+                Preferred and
+                Suitable <em class="font-[500]">Pricing Plans and Options</em> </h3>
+            <p class="max-w-[548px] opacity-65 text-[14px] md:text-[18px] mx-auto">This should be used to tell a story
+                and let your
+                users
+                know a
+                little more about your product or service. How can you benefit them?</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2">
+            <div
+                class="bg-white pricing-card w-full wow animate__animated animate__fadeInLeft pt-6 py-0 md:py-[50px] px-4 md:px-[40px] border-2 hover:border-gray-500 rounded-lg shadow-lg text-center">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="size-14 mx-auto text-primary mb-10">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M12 9v3.75m0-10.036A11.959 11.959 0 0 1 3.598 6 11.99 11.99 0 0 0 3 9.75c0 5.592 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.57-.598-3.75h-.152c-3.196 0-6.1-1.25-8.25-3.286Zm0 13.036h.008v.008H12v-.008Z" />
+                </svg>
+
+                <h4 class="text-xl font-titillium-web font-bold mb-4 text">Starter</h4>
+                <p class="text-4xl font-titillium-web price font-bold mb-4">$249</p>
+                <span class="text-[12px] font-open-sans opacity-65">Per Month</span><br><br>
+                <button class="py-3 px-6 font-titillium-web bg-primary text-white rounded-full font-bold">GET
+                    STARTED</button><br><br>
+                <ul class="space-y-2 mb-4 text-start ">
+                    <li class="flex justify-between">
+                        <p class="font-open-sans">Marketing strategy</p>
+                        <i class="fa fa-check-square" aria-hidden="true"></i>
+                    </li>
+                    <li class="flex justify-between">
+                        <p class="font-open-sans">Competitive analysis</p>
+                        <i class="fa fa-check-square" aria-hidden="true"></i>
+                    </li>
+                    <li class="flex justify-between">
+                        <p class="font-open-sans">Social media audit</p>
+                        <i class="fa fa-check-square" aria-hidden="true"></i>
+                    </li>
+                    <li class="flex justify-between">
+                        <p class="font-open-sans">Monthly management</p>
+                        <i class="fa fa-check-square" aria-hidden="true"></i>
+                    </li>
+                    <li class="flex justify-between">
+                        <p class="font-open-sans">Unlimited data transfer</p>
+                        <i class="fa fa-window-close" aria-hidden="true"></i>
+                    </li>
+
+                </ul>
+
+            </div>
+            <div
+                class="bg-white pricing-card w-full wow animate__animated animate__fadeInUp pt-6 py-0 md:py-[70px] px-4 md:px-[40px] rounded-lg shadow-lg text-center border-2 border-primary">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="size-14 mx-auto text-primary mb-10">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M12 9v3.75m0-10.036A11.959 11.959 0 0 1 3.598 6 11.99 11.99 0 0 0 3 9.75c0 5.592 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.57-.598-3.75h-.152c-3.196 0-6.1-1.25-8.25-3.286Zm0 13.036h.008v.008H12v-.008Z" />
+                </svg>
+                <h4 class="text-xl font-titillium-web  mb-4">Professional</h4>
+                <p class="text-4xl price text-primary font-titillium-web font-bold mb-4">$499</p>
+                <span class="text-[12px] opacity-65 font-open-sans">Per Month</span><br><br>
+                <button class="py-3 px-6 bg-primary text-white rounded-full font-bold">GET STARTED</button><br><br>
+                <ul class="space-y-2 mb-4 text-start ">
+                    <li class="flex justify-between">
+                        <p class="font-open-sans">Marketing strategy</p>
+                        <i class="fa fa-check-square text-primary" aria-hidden="true"></i>
+                    </li>
+                    <li class="flex justify-between">
+                        <p class="font-open-sans">Competitive analysis</p>
+                        <i class="fa fa-check-square text-primary" aria-hidden="true"></i>
+                    </li>
+                    <li class="flex justify-between">
+                        <p class="font-open-sans">Social media audit</p>
+                        <i class="fa fa-check-square text-primary" aria-hidden="true"></i>
+                    </li>
+                    <li class="flex justify-between">
+                        <p class="font-open-sans">Monthly management</p>
+                        <i class="fa fa-check-square text-primary" aria-hidden="true"></i>
+                    </li>
+                    <li class="flex justify-between">
+                        <p class="font-open-sans">Unlimited data transfer</p>
+                        <i class="fa fa-check-square text-primary" aria-hidden="true"></i>
+                    </li>
+
+                </ul>
+            </div>
+            <div
+                class="bg-white pricing-card w-full wow animate__animated animate__fadeInRight pt-6 py-0 md:py-[50px] px-4 md:px-[40px] border-2 hover:border-gray-500 rounded-lg shadow-lg text-center">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="size-14 mx-auto text-primary mb-10">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M12 9v3.75m0-10.036A11.959 11.959 0 0 1 3.598 6 11.99 11.99 0 0 0 3 9.75c0 5.592 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.57-.598-3.75h-.152c-3.196 0-6.1-1.25-8.25-3.286Zm0 13.036h.008v.008H12v-.008Z" />
+                </svg>
+                <h4 class="text-xl font-bold font-titillium-web mb-4 text">Enterprise</h4>
+                <p class="text-4xl price font-titillium-web font-bold mb-4">$799 </p>
+                <span class="text-[12px] font-open-sans opacity-65">Per Month</span><br><br>
+                <button class="py-3 px-6 font-titillium-web bg-primary text-white rounded-full font-bold">GET
+                    STARTED</button><br><br>
+                <ul class="space-y-2 mb-4 text-start ">
+                    <li class="flex justify-between">
+                        <p class="font-open-sans">Marketing strategy</p>
+                        <i class="fa fa-check-square" aria-hidden="true"></i>
+                    </li>
+                    <li class="flex justify-between">
+                        <p class="font-open-sans">Competitive analysis</p>
+                        <i class="fa fa-check-square" aria-hidden="true"></i>
+                    </li>
+                    <li class="flex justify-between">
+                        <p class="font-open-sans">Social media audit</p>
+                        <i class="fa fa-check-square" aria-hidden="true"></i>
+                    </li>
+                    <li class="flex justify-between">
+                        <p class="font-open-sans">Monthly management</p>
+                        <i class="fa fa-check-square" aria-hidden="true"></i>
+                    </li>
+                    <li class="flex justify-between">
+                        <p class="font-open-sans">Unlimited data transfer</p>
+                        <i class="fa fa-check-square" aria-hidden="true"></i>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section class="bg-gray-100 py-20">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-5 md:mb-10 lg:mb-20">
+                <h3 class="text-[22px] md:text-[32px] font-[300]">What Are Our </h3>
+                <h3 class="text-[22px] md:text-[32px] font-bold mb-4">Customers Testimonials </h3>
+                <p class="text-sm md:text-base max-w-xl mx-auto">This should be used to tell a story and let your users
+                    know a little
+                    more
+                    about your product or service. How can you benefit them?</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+                <div
+                    class="wow animate__animated mx-auto mt-3 w-full sm:w-1/2 min-w-[300px] max-w-[250px] w-full animate__fadeInLeft rounded-lg text-center">
+                    <div class="font-open-sans mb-4 bg-white p-8 rounded-md border-2 relative shadow-lg border-primary">
+                        Quisque
+                        volutpat condimentum velit. Class aptent taciti sociosqu ad litora torquent per conubia.
+                        <span
+                            class="icon-quote bg-primary left-1/2 -translate-x-1/2 -translate-x-1/1  w-[50px] h-[50px] absolute -bottom-0 translate-y-1/2 rounded-full p-3 text-white text-[48px]">
+                            <p class="mt-[22px] ml-[12px] flex justify-center items-center flex-col h-0 w-0">“</p>
+                        </span>
+                    </div>
+                    <img src="assets/images/men.jpg" alt="Michael Smith"
+                        class="mt-9 w-[60px] h-[60px] mx-auto rounded-full mb-4" />
+                    <h4 class="text-xl font-bold mb-2">Michael Smith</h4>
+                    <p class="text-sm text-gray-600 mb-4">Backend Developer</p>
+                    <div class="text-yellow-500">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                <div
+                    class="wow animate__animated mx-auto mt-3 w-full sm:w-1/2 min-w-[300px] max-w-[250px] w-full animate__fadeInUp rounded-lg text-center">
+                    <div class="font-open-sans mb-4 bg-white p-8 rounded-md border-2 relative shadow-lg border-primary">
+                        Quisque
+                        volutpat condimentum velit. Class aptent taciti sociosqu ad litora torquent per conubia.
+                        <span
+                            class="icon-quote bg-primary left-1/2 -translate-x-1/2 -translate-x-1/1  w-[50px] h-[50px] absolute -bottom-0 translate-y-1/2 rounded-full p-3 text-white text-[48px]">
+                            <p class="mt-[22px] ml-[12px] flex justify-center items-center flex-col h-0 w-0">“</p>
+                        </span>
+                    </div>
+                    <img src="assets/images/men.jpg" alt="Michael Smith"
+                        class="mt-9 w-[60px] h-[60px] mx-auto rounded-full mb-4" />
+                    <h4 class="text-xl font-bold mb-2">Michael Smith</h4>
+                    <p class="text-sm text-gray-600 mb-4">Backend Developer</p>
+                    <div class="text-yellow-500">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                <div
+                    class="wow animate__animated mx-auto mt-3 w-full sm:w-1/2 min-w-[300px] max-w-[250px] w-full animate__fadeInRight rounded-lg text-center">
+                    <div class="font-open-sans mb-4 bg-white p-8 rounded-md border-2 relative shadow-lg border-primary">
+                        Quisque
+                        volutpat condimentum velit. Class aptent taciti sociosqu ad litora torquent per conubia.
+                        <span
+                            class="icon-quote bg-primary left-1/2 -translate-x-1/2 -translate-x-1/1  w-[50px] h-[50px] absolute -bottom-0 translate-y-1/2 rounded-full p-3 text-white text-[48px]">
+                            <p class="mt-[22px] ml-[12px] flex justify-center items-center flex-col h-0 w-0">“</p>
+                        </span>
+                    </div>
+                    <img src="assets/images/men.jpg" alt="Michael Smith"
+                        class="mt-9 w-[60px] h-[60px] mx-auto rounded-full mb-4" />
+                    <h4 class="text-xl font-bold mb-2">Michael Smith</h4>
+                    <p class="text-sm text-gray-600 mb-4">Backend Developer</p>
+                    <div class="text-yellow-500">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="bg-primary py-16">
+        <div class="container mx-auto px-4 py-8  items-center space-x-8">
+            <div class="owl-carousel owl-theme">
+                <div class="item"><img src="assets/images/slider/img-1.png" alt="Image 1" class="mx-auto max-w-[70px]">
+                </div>
+                <div class="item"><img src="assets/images/slider/img-2.png" alt="Image 2" class="mx-auto max-w-[70px]">
+                </div>
+                <div class="item"><img src="assets/images/slider/img-3.png" alt="Image 3" class="mx-auto max-w-[70px]">
+                </div>
+                <div class="item"><img src="assets/images/slider/img-4.png" alt="Image 4" class="mx-auto max-w-[70px]">
+                </div>
+                <div class="item"><img src="assets/images/slider/img-5.png" alt="Image 5" class="mx-auto max-w-[70px]">
+                </div>
+                <div class="item"><img src="assets/images/slider/img-6.png" alt="Image 6" class="mx-auto max-w-[70px]">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="bg-gray-900 text-white py-16"
+        style="background: linear-gradient(rgba(0,0,0,0.8) , rgba(0,0,0,0.8)) , url('./assets/images/section3.jpg');">
+        <div class="wow animate__animated animate__fadeInUp container mx-auto px-4 text-center">
+            <h3 class="text-base font-titillium-web md:text-xxl font-bold">We Are Waiting</h3>
+            <h2 class="text-4xl font-titillium-web md:text-5xl font-bold my-8">Let's Get Started Now!</h2>
+            <p class="max-w-xl mx-auto font-open-sans mb-8 text-sm md:text-base">We care to deliver adaptive services
+                and solutions to
+                our customers to
+                achieve and satisfy their needs.</p>
+            <button
+                class="text-white font-open-sans font-semibold text-[16px] sm:text-[20px] bg-primary hover:bg-transparent hover:border-2 hover:border-primary border-2 border-transparent p-2 px-6 rounded-full focus:outline-none transition-colors">Let's
+                Start</button>
+        </div>
+    </section>
+    <footer class="container-lg mx-auto py-4 px-0">
+        <div class="mx-auto px-4 flex flex-col sm:flex-row justify-between items-center text-center">
+            <p class="mb-0 text-sm md:text-base">&copy; 2024 <em class="font-medium">Clion</em>. All Rights Reserved.
+            </p>
+            <div class="flex items-center space-x-4 mt-4 sm:mt-0">
+                <a href="https://www.facebook.com"
+                    class="inline-block bg-gray-200 flex items-center justify-center text-sm"><i
+                        class="fab fa-facebook-f"></i></a>
+                <a href="https://www.twitter.com"
+                    class="inline-block bg-gray-200 flex items-center justify-center text-sm"><i
+                        class="fab fa-twitter"></i></a>
+                <a href="https://www.linkedin.com"
+                    class="inline-block bg-gray-200 flex items-center justify-center text-sm"><i
+                        class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script>
+        new WOW().init();
+    </script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: "#da373d",
+                        primary: "#F89522",
+                    },
+                    fontFamily: {
+                        'open-sans': ['Open Sans', 'sans-serif'],
+                        'titillium-web': ['Titillium Web', 'sans-serif'],
+                    },
+                },
+            },
+        };
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+        integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>
