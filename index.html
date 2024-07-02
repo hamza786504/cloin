@@ -51,69 +51,82 @@
                             Hope to Listen From You Soon</a>
                     </div>
                 </div>
-                <div class="w-full max-w-[380px] mt-10 lg:mt-0 animate__animated wow animate__fadeInRight banner_form bg-white py-8 px-3 rounded-lg">
-                    <form id="hero_form">
-                        <h5 class="font-titillium-web">Transfer amount</h5>
-                        <div class="form_field border-gray-200 border rounded-md mt-2 w-full p-3 flex items-center justify-between">
-                            <div class="select_box">
-                                <div id="fromCurrencySelected" class="select_currency_from flex items-center">
-                                    <img src="https://uat-content.mtfxgroup.com/uploads/gb_6f7be5bb59.svg"
-                                        class="w-8 mr-1" alt=""> GBP
-                                </div>
-                            </div>
-                            <input type="text" name="required_amount" style="width: 150px;" id="required_amount" class="editable_text"
-                                value="10000">
-                        </div>
+                <div class="w-full px-6 max-w-[480px] mt-10 lg:mt-0 animate__animated wow animate__fadeInRight banner_form bg-white py-8 px-3 rounded-lg">
+                    <h2 class="text-3xl">3000</h2>
+                    <label id="listbox-label" class="block text-xs font-medium leading-6 text-gray-900">You Send Directly</label>
+                    <div class="relative mt-2">
+                        <button  onclick="toggleCurrencyFrom()" type="button"
+                            class="relative w-full cursor-default rounded-md bg-white py-3 pl-4 pr-10 text-left text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 sm:text-sm sm:leading-6"
+                            aria-haspopup="listbox" aria-expanded="true" aria-labelledby="listbox-label">
+                            <span class="flex items-center">
+                                <img src="" id="currencyImage" alt="Currency" class="h-5 w-5 flex-shrink-0 rounded-full">
+                                <span id="currencyCode" class="ml-3 block truncate"></span>
+                            </span>
+                            <span class="pointer-events-none absolute inset-y-0 right-0 ml-3 flex items-center pr-2">
+                                <svg class="h-5 w-5 text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                    <path fill-rule="evenodd"
+                                        d="M10 3a.75.75 0 01.55.24l3.25 3.5a.75.75 0 11-1.1 1.02L10 4.852 7.3 7.76a.75.75 0 01-1.1-1.02l3.25-3.5A.75.75 0 0110 3zm-3.76 9.2a.75.75 0 011.06.04l2.7 2.908 2.7-2.908a.75.75 0 111.1 1.02l-3.25 3.5a.75.75 0 01-1.1 0l-3.25-3.5a.75.75 0 01.04-1.06z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                            </span>
+                        </button>
+                
+                        <ul id="FromCurrencydropdown"
+                            class="absolute z-10 mt-1 max-h-56 w-full overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm"
+                            tabindex="-1" role="listbox" aria-labelledby="listbox-label" aria-activedescendant="listbox-option-0">
+                        </ul>
+                    </div>
 
-                        <div class="exchange_rates p-3 my-4">
-                            <div class="flex items-center mb-3 justify-between">
-                                <!-- Replaced 'd-flex align-items-center mb-3 justify-content-between' -->
-                                <span class="disabled_text font-open-sans font-semibold">Exchange rate</span>
-                                <span class="disabled_text font-open-sans font-semibold">1.2474 / 0.8016</span>
-                            </div>
-                            <div class="flex items-center mb-3 justify-between">
-                                <!-- Replaced 'd-flex align-items-center mb-3 justify-content-between' -->
-                                <span class="text-primary text-md font-semibold">Exchange rate</span>
-                                <span class="text-primary text-md font-semibold">1.2474 / 0.8016</span>
-                            </div>
-                            <div class="flex items-center justify-between">
-                                <!-- Replaced 'd-flex align-items-center mb-0 justify-content-between' -->
-                                <span class="disabled_text font-open-sans font-semibold">Enjoy extra saving on your first FX
-                                    transfer</span>
-                            </div>
-                        </div>
+                    <div class="flex items-center justify-between py-3">
+                        <p class="text-base mb-0">0.31 CAD</p>
+                        <a href="/" class="text-base mb-0 underline">Domestic wire transfer fee</a>
+                    </div>
+                    <div class="flex items-center justify-between py-3">
+                        <p class="text-base mb-0">7.09 CAD</p>
+                        <p class="text-base mb-0">Our Fee</p> 
+                    </div>
+                    <div class="flex items-center justify-between py-3">
+                        <p class="text-base mb-0">7.40 CAD</p>
+                        <p class="text-base mb-0">Total Fee</p>
+                    </div>
+                    <div class="bg-gray-100 my-3" style="height: 2px;"></div>
+                    <h2 class="text-3xl mt-4">3000</h2>
+                    <label id="listbox-label" class="block text-xs font-medium leading-6 text-gray-900">Recipient Gets</label>
+                    <div class="relative mt-2">
+                        <button  onclick="toggleCurrencyTo()" type="button"
+                            class="relative w-full cursor-default rounded-md bg-white py-3 pl-4 pr-10 text-left text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 sm:text-sm sm:leading-6"
+                            aria-haspopup="listbox" aria-expanded="true" aria-labelledby="listbox-label">
+                            <span class="flex items-center">
+                                <img src="" id="currencyImageTo" alt="Currency" class="h-5 w-5 flex-shrink-0 rounded-full">
+                                <span id="currencyCodeTo" class="ml-3 block truncate"></span>
+                            </span>
+                            <span class="pointer-events-none absolute inset-y-0 right-0 ml-3 flex items-center pr-2">
+                                <svg class="h-5 w-5 text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                    <path fill-rule="evenodd"
+                                        d="M10 3a.75.75 0 01.55.24l3.25 3.5a.75.75 0 11-1.1 1.02L10 4.852 7.3 7.76a.75.75 0 01-1.1-1.02l3.25-3.5A.75.75 0 0110 3zm-3.76 9.2a.75.75 0 011.06.04l2.7 2.908 2.7-2.908a.75.75 0 111.1 1.02l-3.25 3.5a.75.75 0 01-1.1 0l-3.25-3.5a.75.75 0 01.04-1.06z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                            </span>
+                        </button>
+                
+                        <ul id="ToCurrencydropdown"
+                            class="absolute z-10 mt-1 max-h-56 w-full overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm"
+                            tabindex="-1" role="listbox" aria-labelledby="listbox-label" aria-activedescendant="listbox-option-0">
+                        </ul>
+                    </div>
 
-                        <div class="exchange_rates p-3 my-4">
-                            <div class="flex items-center mb-3 justify-between">
-                                <!-- Replaced 'd-flex align-items-center mb-3 justify-content-between' -->
-                                <span class="disabled_text font-open-sans font-semibold">MTFX fee*</span>
-                                <span class="disabled_text font-open-sans font-semibold">+ £0 GBP</span>
-                            </div>
-                            <div class="flex items-center mb-3 justify-between">
-                                <!-- Replaced 'd-flex align-items-center mb-3 justify-content-between' -->
-                                <span class="text-primary text-md font-semibold">Total amount you pay</span>
-                                <span class="text-primary text-md font-semibold">£10,000GBP</span>
-                            </div>
+                    <p class="text-xs my-2 mt-4">You could save up to <strong> 40.17 CAD</strong></p>
+                    <p class="text-xs">Should arrive by Wednesday</p>
+                    <div class="flex -mx-1 pt-5 items-center flex-wrap justify-center">
+                        <div class="w-full sm:w-1/2 px-1">
+                            <button class="bg-primary w-full rounded-full border-2 p-3 text-white hover:bg-white hover:text-primary font-semibold text-lg border-primary">Compare Price</button>
                         </div>
-
-                        <h5 class="font-titillium-web">Recipient Gets</h5>
-                        <div class="form_field border border-gray-200 rounded-md mt-2 p-3 flex items-center justify-between">
-                            <div class="select_box">
-                                <div id="toCurrencySelected" class="select_currency_to flex items-center">
-                                    <img src="https://uat-content.mtfxgroup.com/uploads/us_fe22e367c0.svg"
-                                        class="w-8 mr-1" alt=""> USD
-                                </div>
-                            </div>
-                            <input type="number" name="estimate_amount" style="width: 150px;" id="estimate_amount" class="editable_text"
-                                value="10000">
+                        <div class="w-full sm:w-1/2 mt-3 sm:mt-0  px-1">
+                            <button class="bg-white text-primary hover:text-white hover:bg-primary w-full rounded-full border-2 border-primary p-3 text-lg border-primary">Get Started</button>
                         </div>
-                        <p class="mx-auto text-center mt-3 mb-1 text-gray-700">Already an MTFX client? <span
-                                class="text-primary">Login</span></p>
-                        <div class="flex justify-center">
-                            <button class="bg-primary p-3 text-white hover:bg-transparent hover:text-primary hover:border-2 font-open-sans border-2 border-primary font-bold rounded-full px-10 mt-3">Sign Up</button>
-                        </div>
-                    </form>
+                    </div>
                 </div>
+                
             </div>
         </div>
     </section>

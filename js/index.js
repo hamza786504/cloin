@@ -1,5 +1,3 @@
-
-
 $(document).ready(
     $('.owl-carousel').owlCarousel({
         loop: true,
@@ -24,100 +22,135 @@ $(document).ready(
 
 
 
-const form = document.getElementById('hero_form');
-const nameInput = document.getElementById('name');
-const emailInput = document.getElementById('email');
-const phoneInput = document.getElementById('phone');
 
-form.addEventListener('submit', function (event) {
-    event.preventDefault();
-    if (validateForm()) {
-        submitFormData();
-    }
-});
 
-function validateForm() {
-    let isValid = true;
 
-    // Resetting styles
-    nameInput.classList.remove('border-red-500');
-    emailInput.classList.remove('border-red-500');
-    phoneInput.classList.remove('border-red-500');
 
-    // Validating Name
-    if (nameInput.value.trim() === '') {
-        nameInput.classList.add('border-red-500');
-        isValid = false;
-    }
+const currencies = [
+    { imageSrc: './assets/images/united-states.png', code: 'USD' },
+    { imageSrc: './assets/images/canada.png', code: 'CAD' },
+    { imageSrc: './assets/images/german.png', code: 'EUR' }
+];
 
-    // Validating Email
-    if (emailInput.value.trim() === '') {
-        emailInput.classList.add('border-red-500');
-        isValid = false;
-    } else {
-        // Using a simple regex for email validation
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (!emailRegex.test(emailInput.value.trim())) {
-            emailInput.classList.add('border-red-500');
-            isValid = false;
-        }
-    }
 
-    // Validating Phone Number
-    if (phoneInput.value.trim() === '') {
-        phoneInput.classList.add('border-red-500');
-        isValid = false;
-    } else {
-        if (phoneInput.value.trim().length > 13) {
-            phoneInput.classList.add('border-red-500');
-            isValid = false;
-        }
-    }
+let selectedFromCurrency = { imageSrc: './assets/images/united-states.png', code: 'USD' };
+let selectedToCurrency = { imageSrc: './assets/images/canada.png', code: 'CAD' };
 
-    return isValid;
+
+const currencyImage = document.getElementById("currencyImage");
+const currencyImageTo = document.getElementById("currencyImageTo");
+
+const currencyCode = document.getElementById("currencyCode");
+const currencyCodeTo = document.getElementById("currencyCodeTo");
+
+const dropdown = document.getElementById("FromCurrencydropdown");
+const Todropdown = document.getElementById("ToCurrencydropdown");
+
+
+currencyImage.src = selectedFromCurrency.imageSrc;
+currencyCode.textContent = selectedFromCurrency.code;
+
+currencyImageTo.src = selectedToCurrency.imageSrc;
+currencyCodeTo.textContent = selectedToCurrency.code;
+
+
+// For from
+function updateSelectedCurrency(code) {
+    selectedFromCurrency = currencies.filter(curr => curr.code === code)[0];
+    // Populate initial button content with the first currency
+    currencyImage.src = selectedFromCurrency.imageSrc;
+    currencyCode.textContent = selectedFromCurrency.code;
+    // Update button content or perform other actions if needed
 }
 
-function submitFormData() {
-    const formData = new FormData();
-    formData.append('name', nameInput.value.trim());
-    formData.append('email', emailInput.value.trim());
-    formData.append('phone', phoneInput.value.trim());
+// For TO
+function updateSelectedCurrencyTo(code) {
+    selectedToCurrency = currencies.filter(curr => curr.code === code)[0];
+    // Populate initial button content with the first currency
+    currencyImageTo.src = selectedToCurrency.imageSrc;
+    currencyCodeTo.textContent = selectedToCurrency.code;
+    // Update button content or perform other actions if needed
+}
 
-    fetch('https://example.com/api/submit', {
-        method: 'POST',
-        body: formData
-    })
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Network response was not ok');
-            }
-            return response.json();
-        })
-        .then(data => {
-            console.log('Form submitted successfully:', data);
-            // Optionally, you can show a success message or redirect the user
-        })
-        .catch(error => {
-            console.error('Error submitting form:', error);
-            // Handle errors here (e.g., show an error message to the user)
+
+// For from currency
+currencies.forEach((currency, index) => {
+    const li = document.createElement('li');
+    li.classList.add('relative', 'cursor-default', 'select-none', 'py-2', 'pl-3', 'pr-9', 'text-gray-900');
+    li.id = `listbox-option-${index}`;
+    li.role = 'option';
+
+    let html = `<div class="flex items-center">
+                        <img src="${currency.imageSrc}" alt="Currency" class="h-5 w-5 flex-shrink-0 rounded-full">
+                        <span class="ml-3 block truncate font-normal">${currency.code}</span>
+                    </div>
+                    <span class="absolute inset-y-0 right-0 flex items-center pr-4 text-indigo-600"></span>`;
+    li.innerHTML = html;
+
+    li.addEventListener("click", () => {
+        updateSelectedCurrency(li.innerText);
+
+        // Hide all SVGs and then show the corresponding one
+        dropdown.querySelectorAll("svg").forEach((svg) => {
+            svg.classList.add("hidden");
         });
+
+        const svgToShow = li.querySelector("svg");
+        if (svgToShow) {
+            svgToShow.classList.remove("hidden");
+        }
+
+        dropdown.classList.add("hidden"); // Hide dropdown after selection
+    });
+
+
+    dropdown.appendChild(li);
+});
+
+// For to currency
+currencies.forEach((currency, index) => {
+    const li = document.createElement('li');
+    li.classList.add('relative', 'cursor-default', 'select-none', 'py-2', 'pl-3', 'pr-9', 'text-gray-900');
+    li.id = `listbox-option-${index}`;
+    li.role = 'option';
+
+    let html = `<div class="flex items-center">
+                        <img src="${currency.imageSrc}" alt="Currency" class="h-5 w-5 flex-shrink-0 rounded-full">
+                        <span class="ml-3 block truncate font-normal">${currency.code}</span>
+                    </div>
+                    <span class="absolute inset-y-0 right-0 flex items-center pr-4 text-indigo-600"></span>`;
+    li.innerHTML = html;
+
+    li.addEventListener("click", () => {
+        updateSelectedCurrencyTo(li.innerText);
+
+        // Hide all SVGs and then show the corresponding one
+        Todropdown.querySelectorAll("svg").forEach((svg) => {
+            svg.classList.add("hidden");
+        });
+
+        const svgToShow = li.querySelector("svg");
+        if (svgToShow) {
+            svgToShow.classList.remove("hidden");
+        }
+
+        Todropdown.classList.add("hidden"); // Hide Todropdown after selection
+    });
+
+
+    Todropdown.appendChild(li);
+});
+
+
+
+
+dropdown.classList.add("hidden");
+function toggleCurrencyFrom() {
+    dropdown.classList.toggle("hidden");
 }
-
-// Adding event listeners for real-time validation
-nameInput.addEventListener('input', function () {
-    nameInput.classList.remove('border-red-500');
-    validateForm();
-});
-
-emailInput.addEventListener('input', function () {
-    emailInput.classList.remove('border-red-500');
-    validateForm();
-});
-
-phoneInput.addEventListener('input', function () {
-    phoneInput.classList.remove('border-red-500');
-    validateForm();
-});
-
+Todropdown.classList.add("hidden");
+function toggleCurrencyTo() {
+    Todropdown.classList.toggle("hidden");
+}
 
 

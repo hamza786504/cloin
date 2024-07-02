@@ -19,6 +19,14 @@ body {
 .hero_section {
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../assets/images/hero-bg.jpg');
 }
+.dropdown svg {
+  display: none;
+}
+
+.dropdown svg.active {
+  display: inline-block; /* Adjust display property based on your design */
+}
+
 
 .icon {
   display: inline-flex;
